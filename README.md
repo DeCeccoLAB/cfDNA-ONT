@@ -113,7 +113,7 @@ Rscript /path/to/ichorCNA/scripts/runIchorCNA.R \
 
 ## Motif Analysis
 
-For the analysis of 4-mer end motifs, a custom Python script was used.  
+For the analysis of 4-mer end motifs, a custom Python script was used: [motif_analysis.py](scripts/motif_analysis.py)
 This script extracts end-motifs from Nanopore BAM files, generates frequency plots, pie charts of base composition, and outputs the top 20 motifs with counts and frequencies, along with a log file of filtering statistics.
 
 The approach is based on the method described in **[Katsman et al., 2022]**, adapted for genome-wide cfDNA analysis.
