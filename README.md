@@ -40,5 +40,23 @@ dorado demux \
 ### Reference
 - Dorado: [https://github.com/nanoporetech/dorado](https://github.com/nanoporetech/dorado)
 
+### Alignment and Filtering with minimap2 
+
+```bash
+# Convert BAM to FASTQ
+samtools fastq -@ 4 -O -n /path/to/input.bam | gzip > /path/to/output.fastq.gz
+
+# Align FASTQ to reference genome with minimap2 and filter reads
+/path/to/minimap2 -ax map-ont --MD -L /path/to/reference_genome.mmi /path/to/output.fastq.gz \
+  | samtools view -h -q 20 -F 0x4 -F 0x100 -F 0x800 \
+  | awk '( $9 < 700 || $1 ~ /^@/ )' \
+  | samtools view -bS -o /path/to/output.filtered.bam
+```
+
+### Reference
+- minimap2: https://github.com/lh3/minimap2
+- Heng Li, Minimap2: pairwise alignment for nucleotide sequences, Bioinformatics, Volume 34, Issue 18, September 2018, Pages 3094–3100, https://doi.org/10.1093/bioinformatics/bty191  
+
+
 
 
