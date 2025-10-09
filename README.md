@@ -111,6 +111,27 @@ Rscript /path/to/ichorCNA/scripts/runIchorCNA.R \
 - ichorCNA: https://github.com/broadinstitute/ichorCNA
 - Adalsteinsson, V.A., Ha, G., Freeman, S.S. et al. Scalable whole-exome sequencing of cell-free DNA reveals high concordance with metastatic tumors. Nat Commun 8, 1324 (2017). https://doi.org/10.1038/s41467-017-00965-y
 
+## Motif Analysis
+
+For the analysis of 4-mer end motifs, a custom Python script was used.  
+This script extracts end-motifs from Nanopore BAM files, generates frequency plots, pie charts of base composition, and outputs the top 20 motifs with counts and frequencies, along with a log file of filtering statistics.
+
+The approach is based on the method described in **[Katsman et al., 2022]**, adapted for genome-wide cfDNA analysis.
+
+**Usage example:**
+
+```bash
+python3 /path/to/motif_analysis.py \
+  --bam /path/to/sample.filtered.bam \
+  --reference /path/to/reference_genome.fa \
+  --chromosomes /path/to/chr_list.txt \
+  --sample SAMPLE_NAME
+```
+### Reference
+- https://github.com/methylgrammarlab/Fragmentomics_GenomBiol
+- Katsman, E., Orlanski, S., Martignano, F. et al. Detecting cell-of-origin and cancer-specific methylation features of cell-free DNA from Nanopore sequencing. Genome Biol 23, 158 (2022). https://doi.org/10.1186/s13059-022-02710-1
+ 
+
 
 
 
