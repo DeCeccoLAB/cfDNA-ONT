@@ -1,0 +1,4 @@
+dorado demux \
+  --output-dir ./bam_demuxed \
+  --no-classify \
+  output_pass.bam
