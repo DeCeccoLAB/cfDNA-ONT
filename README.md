@@ -1,4 +1,4 @@
-<img src="logo/FLARE.jpeg" alt="FLARE Logo" align="right" width="150">
+<img src="logo/FLARE.jpeg" alt="FLARE Logo" align="right" width="160">
 
 # Fragmenting the Future with FLARE:<br>A Comprehensive Fragmentomics Pipeline<br>Based on Long-read Nanopore Sequencing
 
