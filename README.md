@@ -1,4 +1,7 @@
-# Fragmenting the Future: Development of a Comprehensive Fragmentomics Pipeline Powered by Nanopore Sequencing Data
+<img src="logo/FLARE.jpeg" alt="FLARE Logo" align="right" width="150">
+
+# Fragmenting the Future with FLARE:<br>A Comprehensive Fragmentomics Pipeline<br>Based on Long-read Nanopore Sequencing
+
 After sequencing, the raw signal data were used for basecalling with the Dorado 
 basecaller, and the resulting reads were aligned to the human reference genome 
 (hg38) using minimap2. Tumor fraction and copy number variations (CNVs) were 
